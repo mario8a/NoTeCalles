@@ -1,1 +1,75 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu side="left" id="authenticated" [content]="content">
+    <ion-header>
+        <ion-toolbar class="user-profile">
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-4>
+
+                        <img class="circle-pic" src="../assets/imgs/perfil.jpg">
+
+                    </ion-col>
+                    <ion-col padding-top col-8>
+                        <h2 ion-text class="no-margin bold text-white">
+                            Juan Perez
+                        </h2>
+
+                    </ion-col>
+                </ion-row>
+
+                <ion-row no-padding class="other-data">
+                    <ion-col no-padding class="column">
+                        <button ion-button icon-left small full color="light" menuClose disabled>
+                    <ion-icon name="contact"></ion-icon>
+                    Edit Profile
+                  </button>
+                    </ion-col>
+                    <ion-col no-padding class="column">
+                        <button ion-button icon-left small full color="light" menuClose (click)="logout()">
+                    <ion-icon name="log-out"></ion-icon>
+                    Log Out
+                  </button>
+                    </ion-col>
+                </ion-row>
+
+            </ion-grid>
+
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content color="primary">
+
+        <ion-list class="user-list">
+
+
+            <button ion-item (click)="abrirPagina( Nota )">
+                    <ion-icon item-left name="clipboard" color="primary"></ion-icon>
+                    Mis notas
+            </button>
+
+            <button ion-item (click)="abrirPagina( subirNota )">
+                    <ion-icon item-left name="cloud-upload" color="primary"></ion-icon>
+                    Subir nota
+            </button>
+
+            <button ion-item (click)="abrirPagina( ingreso )">
+                    <ion-icon item-left name="logo-usd" color="primary"></ion-icon>
+                    Ingresos
+            </button>
+
+            <button ion-item (click)="abrirPagina( Inmail )">
+                    <ion-icon item-left name="mail" color="primary"></ion-icon>
+                    In-Mail
+            </button>
+
+            <button ion-item (click)="abrirPagina( testi )">
+                <ion-icon item-left name="glasses" color="primary"></ion-icon>
+                Testimonios
+        </button>
+
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

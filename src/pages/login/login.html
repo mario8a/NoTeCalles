@@ -1,0 +1,50 @@
+<!-- -->
+<ion-content padding class="animated fadeIn login auth-page">
+    <div class="login-content">
+
+        <!-- Logo -->
+        <div padding-horizontal text-center class="animated fadeInDown">
+            <div class="logo">
+                <img src="../../assets/imgs/looogo.jpeg">
+            </div>
+        </div>
+
+        <!-- Login form -->
+        <form class="list-form">
+            <ion-item>
+                <ion-label floating>
+                    <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+                    Email
+                </ion-label>
+                <ion-input type="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>
+                    <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+                    Password
+                </ion-label>
+                <ion-input type="password"></ion-input>
+            </ion-item>
+        </form>
+
+        <p text-right ion-text color="secondary" tappable><strong>Forgot Password?</strong></p>
+
+        <div>
+            <ion-row>
+                <ion-col col-6>
+                    <button ion-button icon-start block color="dark" tappable>
+                        <ion-icon name="log-in"></ion-icon>
+                        SIGN IN
+                      </button>
+                </ion-col>
+                <ion-col col-6>
+                    <button ion-button icon-start block color="dark" tappable (click)="irNotas()">
+                        <ion-icon name="log-in"></ion-icon>
+                        LOG IN
+                      </button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>

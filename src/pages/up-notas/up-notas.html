@@ -1,0 +1,75 @@
+<!--
+  Generated template for the UpNotasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Escribe tu nota</ion-title>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+</button>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <h1>Titulo</h1>
+        <ion-item>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <h2>Cuerpo</h2>
+        <ion-item>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <ion-item *ngIf="imagenPrevia">
+
+        <img [src]="imagenPrevia">
+
+    </ion-item>
+
+
+    <div>
+        <ion-row>
+            <ion-col>
+                <button ion-button block color="primary" type="button" name="button">
+                                Subir fotos, videos, audios
+                              </button>
+            </ion-col>
+        </ion-row>
+    </div>
+    <button ion-button block color="primary" type="button" name="button">
+            Documentacion(Audio,Video)
+    </button>
+
+
+    <div>
+        <ion-item>
+            <ion-label>Acepto terminos y condiciones</ion-label>
+            <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+    </div>
+
+    <div>
+        <ion-list>
+            <ion-item>
+                <ion-label>Selecciona identidad</ion-label>
+                <ion-select [(ngModel)]="iden">
+                    <ion-option value="firmar">Firmar</ion-option>
+                    <ion-option value="anonimo">Anonimo</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <button ion-button block color="primary" type="button" name="button" (click)="acepto()">
+            Submit
+    </button>
+
+</ion-content>
